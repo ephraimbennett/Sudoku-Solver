@@ -114,11 +114,11 @@ void SudokuGame::FillGrid(bool step) {
 }
 
 bool SudokuGame::IsNumUnique(vector<int> v, int n) {
-    cout << "Checking: ";
+    /*cout << "Checking: ";
     for (auto x : v) {
         cout << x;
     }
-    cout << ". For: " << n << endl;
+    cout << ". For: " << n << endl;*/
     int nums[10] = {0};
     for (int x : v) {
         if(x == 0) continue;
@@ -153,7 +153,7 @@ bool SudokuGame::SolveNaive(int row, int col) {
     }
 
     if (col == 9) {//if column has grown past actual column size, reset and pass to next row
-        cout << "PASS" << endl;
+        //cout << "PASS" << endl;
         row++;
         col = 0;
     }
